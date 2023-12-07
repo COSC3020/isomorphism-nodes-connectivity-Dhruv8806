@@ -13,12 +13,22 @@ one-to-one and onto function (bijection) $f: V_1 \rightarrow V_2$ such that $(u,
 
 ## My Implementation 
 
--> We consider two graphs, $A$ and $B$, with the same number of nodes, and both are completely connected. To prove that they are isomorphic, we can establish a one-to-one and onto function between their node sets, $V_1$ and $V_2$
+-> We consider two graphs, $A = (V_A  , E_A)$ and $B = (V_B , E_B)$, with $|V_A| = |V_B|$ as they same number of nodes, and both are completely connected. 
 
--> Since $A$ and $B$ have the same number of nodes, there exists a bijective function $f: V_1 \rightarrow V_2$ that maps each node in $A$ to a unique node in $B$. This one-to-one correspondence ensures that there are no extra or unmatched nodes in either graph
+To prove that $A$ and $B$ are isomorphic, we need to establish a bijective function $f$ : $A$ $\leftrightarrow$ $B$ such that each node $v$ $\in$  $V_A$, there exists a unique corresponding node $u$ $\in$ $V_B$
 
--> Now, let's examine the edges. Since both $A$ and $B$ are completely connected, every node in each graph is connected to every other node. This means that if two nodes, $u$ and $v$, are connected by an edge in $A$, their corresponding nodes, $f(u)$ and $f(v)$, must also be connected by an edge in B due to the bijective nature of the function $f$
+$\forall_v$ $\in$ $V_A$ : $v$ $\leftrightarrow$ $f(v)$ 
 
--> Therefore, we've established a one-to-one and onto function f that preserves both the nodes and edges of $A$ and maps them to $B$, satisfying the definition of isomorphism. Hence, if two graphs have the same number of nodes and are completely connected, and they must be isomorphic.
+
+-> For any edge: $(x, y)$ $\in$ $E_A$, there must exist a corresponding edge $(f(x), f(y))$ $\in$ $E_B$ . This means that if there's any connection between nodes $x$ and $y$ in $A$ , the same connection must exist between their counterparts $f(x)$ and $f(y)$ in $B$ . The rule applying to all edges in $A$ . 
+
+$\forall$ $(x,y)$ $\in$ $E_A$ : $(f(x), f(y))$ $\in$ $E_B$
+
+-> For each Edge: It's looking for each individual connection, so for each individual edge $e$ = $(x, y)$ $\in$ $E_A$ , it's corresponding edge $f(e) = (f(x), f(y))$ must exist in $E_B$ . And we consider specific connection in $A$ ensuring it's counterpart in $B$. 
+
+$\forall_e$ = $(x, y)$ $\in$ $E_A$ : $e$ $\leftrightarrow$ $f(e)$ = $(f(x) , f(y))$ $\in$ $E_B$
+
+-> Overall, isomorphism ensures that not only are nodes matched up, but the connections between those nodes (edges) in $A$ are exactly mapped to $B$.  Hence, if two graphs have the same number of nodes and are completely connected, they must be isomorphic.
+
 
 -> Sources Used: TA
