@@ -13,22 +13,19 @@ one-to-one and onto function (bijection) $f: V_1 \rightarrow V_2$ such that $(u,
 
 ## My Implementation 
 
--> We consider two graphs, $A = (V_A  , E_A)$ and $B = (V_B , E_B)$, with $|V_A| = |V_B|$ as they same number of nodes, and both are completely connected. 
+-> We consider two fully connected graphs graphs, $A = (V_1  , E_1)$ and $B = (V_2 , E_2)$, both having an equal number of nodes, the potential for a one-to-one bijection mapping. 
 
-To prove that $A$ and $B$ are isomorphic, we need to establish a bijective function $f$ : $A$ $\leftrightarrow$ $B$ such that each node $v$ $\in$  $V_A$, there exists a unique corresponding node $u$ $\in$ $V_B$
+-> In the fully connected graphs, each node connects with every other node. This connectivity holds true for both A and B, ensuring that nodes within A are essentially equivalent, both in terms of edges and total node count. This means that for every node in A, there exists an edge connecting it to each and every other node in A, and the same holds for B. This connectivity equivalence, paired with an equal count of edges, sets the stage for establishing isomorphism
 
-$\forall_v$ $\in$ $V_A$ : $v$ $\leftrightarrow$ $f(v)$ 
+-> Bijective Mapping construction
+  - Nodes of $A$ are randomly permuted, resulting in a unique order.
+  - Similarly, nodes of $B$ has a random permutation, yielding a distinct order. 
+  - Bijective mapping: $f: V_1$ $\rightarrow V_2$ by associating each node in $A$ with the corresponding node in $B$ without repetition.
 
+-> For any node in $u$ $\in$ $V_1$ , its counterpart $f(u)$ $\in$ $V_2$ is unique. 
 
--> For any edge: $(x, y)$ $\in$ $E_A$, there must exist a corresponding edge $(f(x), f(y))$ $\in$ $E_B$ . This means that if there's any connection between nodes $x$ and $y$ in $A$ , the same connection must exist between their counterparts $f(x)$ and $f(y)$ in $B$ . The rule applying to all edges in $A$ . 
+-> For each edge $(u , v)$ $\in$ $E_1$ , the corresponding edge $(f(u) , f(v))$ $\in$ $E_2$ is also present. 
 
-$\forall$ $(x,y)$ $\in$ $E_A$ : $(f(x), f(y))$ $\in$ $E_B$
-
--> For each Edge: It's looking for each individual connection, so for each individual edge $e$ = $(x, y)$ $\in$ $E_A$ , it's corresponding edge $f(e) = (f(x), f(y))$ must exist in $E_B$ . And we consider specific connection in $A$ ensuring it's counterpart in $B$. 
-
-$\forall_e$ = $(x, y)$ $\in$ $E_A$ : $e$ $\leftrightarrow$ $f(e)$ = $(f(x) , f(y))$ $\in$ $E_B$
-
--> Overall, isomorphism ensures that not only are nodes matched up, but the connections between those nodes (edges) in $A$ are exactly mapped to $B$.  Hence, if two graphs have the same number of nodes and are completely connected, they must be isomorphic.
-
+-> In conclusion, the shared number of nodes, equivalent node structures, and the bijective mapping construction establish a one-to-one and onto mapping between the completely connected graphs $A$ and $B$. This ensures not only a matching of nodes but also an exact mapping of the connections (edges) between nodes in $A$ to $B$. Therefore, if two graphs have the same number of nodes and are completely connected, they must be isomorphic
 
 -> Sources Used: TA
